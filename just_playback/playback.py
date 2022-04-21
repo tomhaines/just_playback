@@ -209,6 +209,13 @@ class Playback:
         """
 
         return self.__file_duration
+
+    @property
+    def eos_reached(self) :
+        """
+            Check if the playback has reached the end of the stream
+        """
+        return self.__ma_attrs.audio_stream_ended_naturally
     
     @property
     def volume(self) -> float:
